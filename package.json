@@ -1,0 +1,85 @@
+{
+  "name": "nuxt-typescript-starter",
+  "version": "1.0.4",
+  "private": true,
+  "dependencies": {
+    "@nuxtjs/pwa": "^2.0.5",
+    "axios": "^0.17.1",
+    "nuxt": "^1.2.1",
+    "nuxt-class-component": "^1.2.0",
+    "vue-class-component": "^6.1.2",
+    "vue-property-decorator": "^6.0.0",
+    "vuetify": "^1.0.0-beta.5",
+    "vuex-class": "^0.3.0"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "test": "jest --no-cache",
+    "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^22.1.1",
+    "@types/node": "^9.4.0",
+    "babel-jest": "^22.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-vue-app": "^2.0.0",
+    "jest": "^22.1.4",
+    "jest-serializer-vue": "^0.3.0",
+    "jest-vue-preprocessor": "^1.3.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "ts-jest": "^22.0.2",
+    "ts-loader": "^3.4.0",
+    "typescript": "^2.6.2",
+    "vue-language-server": "^0.0.30",
+    "vue-test-utils": "^1.0.0-beta.11"
+  },
+  "jest": {
+    "verbose": true,
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true
+      }
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+    },
+    "moduleNameMapper": {
+      "^~/(.*)$": "<rootDir>/$1",
+      "^vue$": "vue/dist/vue.common.js"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/unit/setup"
+    ],
+    "mapCoverage": true,
+    "coverageDirectory": "<rootDir>/test/unit/coverage",
+    "collectCoverageFrom": [
+      "components/**/*.{js,ts,vue}",
+      "layouts/**/*.{js,ts,vue}",
+      "pages/**/*.{js,ts,vue}",
+      "store/**/*.{js,ts}",
+      "!**/node_modules/**"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/test/e2e"
+    ],
+    "testMatch": [
+      "**/*.spec.(js|ts)"
+    ]
+  }
+}
