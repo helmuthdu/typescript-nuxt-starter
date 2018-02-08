@@ -21,7 +21,11 @@ module.exports = {
   /*
   ** Build configuration
   */
-  plugins: ['~/plugins/vuetify.ts', '~/plugins/axios'],
+  plugins: [
+    '~/plugins/vuetify.ts',
+    '~/plugins/axios',
+    '~/plugins/vue-rxjs',
+  ],
   css: ['~/assets/styles/app.styl'],
   build: {
     vendor: ['axios', 'vuex-class', 'nuxt-class-component']
