@@ -9,7 +9,7 @@
     "nuxt-class-component": "^1.2.0",
     "vue-class-component": "^6.1.2",
     "vue-property-decorator": "^6.0.0",
-    "vuetify": "^1.0.0-beta.5",
+    "vuetify": "^1.0.0-beta.6",
     "vuex": "^3.0.1",
     "vuex-class": "^0.3.0"
   },
@@ -32,10 +32,12 @@
     "jest": "^22.2.1",
     "jest-serializer-vue": "^0.3.0",
     "jest-vue-preprocessor": "^1.3.1",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
     "ts-jest": "^22.0.3",
     "ts-loader": "^3.5.0",
+    "tslint": "^5.9.1",
+    "tslint-config-standard": "^7.0.0",
     "typescript": "^2.7.1",
     "vue-language-server": "^0.0.30",
     "vue-test-utils": "^1.0.0-beta.11"

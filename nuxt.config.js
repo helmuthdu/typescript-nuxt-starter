@@ -22,7 +22,7 @@ module.exports = {
     ** Build configuration
     */
     plugins: ['~/plugins/vuetify.ts'],
-    css: ['~/assets/styles/main.scss'],
+    css: ['~/assets/styles/app.styl'],
     build: {
         vendor: ['axios', 'vuex-class', 'nuxt-class-component']
     },
