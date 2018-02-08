@@ -1,7 +1,5 @@
 import { RootState } from 'store';
 import { ActionContext, ActionTree, GetterTree, MutationTree } from 'vuex';
-import axios from '~/plugins/axios';
-import * as people from './modules/people';
 
 export const types = {};
 
@@ -18,9 +16,9 @@ export interface Actions<S, R> extends ActionTree<S, R> {
 
 export const actions: Actions<State, RootState> = {
     async nuxtServerInit ({ commit }) {
-        const response = await axios.get('/random-data.json');
-        const staticPeople = response.data.slice(0, 10);
-        commit(`${people.name}/${people.types.SET}`, staticPeople, { root: true });
+        // example:
+        // const response = await axios.get('/random-data.json');
+        // commit(`${auth.namespace}/${auth.Types.AUTH_SET_USER}`, response.data, { root: true });
     }
 };
 

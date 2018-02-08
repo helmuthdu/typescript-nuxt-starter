@@ -39,18 +39,8 @@
 <script lang="ts">
     import Component from 'nuxt-class-component';
     import Vue from 'vue';
-    import { Getter, namespace, State } from 'vuex-class';
 
-    import * as people from '~/store/modules/people';
-
-    const PeopleState = namespace(people.name, State);
-    const PeopleGetter = namespace(people.name, Getter);
-
-    @Component({
-    })
+    @Component
     export default class extends Vue {
-        @PeopleState selected;
-        @PeopleState people;
-        @PeopleGetter selectedPerson;
     }
 </script>

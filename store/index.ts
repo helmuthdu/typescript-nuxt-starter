@@ -1,5 +1,5 @@
 import Vuex from 'vuex';
-import * as people from './modules/people';
+import * as auth from './modules/auth';
 import * as root from './root';
 
 // More info about store: https://vuex.vuejs.org/en/core-concepts.html
@@ -11,7 +11,7 @@ import * as root from './root';
 // action: Sync or async operations that commit mutations
 // mutations: Modify the state
 interface ModulesStates {
-    people: people.State
+    auth: auth.State
 }
 
 export type RootState = root.State & ModulesStates
@@ -23,7 +23,7 @@ const createStore = () => {
         mutations: root.mutations,
         actions: root.actions,
         modules: {
-            [people.name]: people
+            [auth.name]: auth
         }
     });
 };
