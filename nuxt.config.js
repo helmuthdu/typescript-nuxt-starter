@@ -23,7 +23,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/vuetify.ts',
-    '~/plugins/axios',
+    // '~/plugins/axios',
     '~/plugins/vue-rxjs',
   ],
   css: ['~/assets/styles/app.styl'],

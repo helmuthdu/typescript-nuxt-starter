@@ -94,7 +94,7 @@
     "typedef-whitespace": [
       true,
       {
-        "call-signature": "nospace",
+        "call-signature": "onespace",
         "index-signature": "nospace",
         "parameter": "nospace",
         "property-declaration": "nospace",

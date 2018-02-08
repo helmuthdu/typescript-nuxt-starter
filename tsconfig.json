@@ -21,8 +21,8 @@
     ],
     "paths": {
       "~/": ["./"],
-      "~/api/*": ["./api/*"],
       "~/assets/*": ["./assets/*"],
+      "~/config/*": ["./config/*"],
       "~/components/*": ["./components/*"],
       "~/middleware/*": ["./middleware/*"],
       "~/pages/*": ["./pages/*"],

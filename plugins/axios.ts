@@ -1,8 +1,10 @@
 import axios from 'axios';
-import Vue from 'vue';
 
 export const fetch = axios.create({
-    baseURL: process.env.baseUrl
+    // baseURL: process.env.baseUrl,
+    headers: {
+        'Access-Control-Allow-Origin': '*'
+    }
 });
 
 const requestSuccess = (req) => {
@@ -27,15 +29,3 @@ const responseError = (err) => {
 
 fetch.interceptors.request.use(requestSuccess, requestError);
 fetch.interceptors.response.use(responseSuccess, responseError);
-
-const http = (Vue) => {
-    Object.defineProperties(Vue.prototype, {
-        $http: {
-            get() {
-                return fetch;
-            }
-        }
-    });
-};
-
-Vue.use(http);
