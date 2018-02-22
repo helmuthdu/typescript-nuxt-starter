@@ -1,25 +1,26 @@
-import { RootState } from 'store';
 import { ActionContext, ActionTree, GetterTree, MutationTree } from 'vuex';
+import { RootState } from './index';
 
 export const types = {};
 
 export interface State {
+  version: string;
 }
 
-export const state = (): State => ({});
+export const state = (): State => ({
+  version: '1.0.0'
+});
 
 export const getters: GetterTree<State, RootState> = {};
 
 export interface Actions<S, R> extends ActionTree<S, R> {
-    nuxtServerInit (context: ActionContext<S, R>): void
+  getVersion (context: ActionContext<S, R>): void;
 }
 
 export const actions: Actions<State, RootState> = {
-    async nuxtServerInit ({ commit }) {
-        // example:
-        // const response = await axios.get('/random-data.json');
-        // commit(`${auth.namespace}/${auth.Types.AUTH_SET_USER}`, response.data, { root: true });
-    }
+  async getVersion (context: ActionContext<State, RootState>) {
+    return context.state.version;
+  }
 };
 
 export const mutations: MutationTree<State> = {};

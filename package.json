@@ -4,15 +4,15 @@
   "private": true,
   "dependencies": {
     "@nuxtjs/pwa": "^2.0.5",
-    "axios": "^0.17.1",
+    "axios": "^0.18.0",
     "nuxt": "^1.3.0",
     "nuxt-class-component": "^1.2.0",
     "qs": "^6.5.1",
     "rxjs": "^5.5.6",
-    "vue-class-component": "^6.1.2",
+    "vue-class-component": "^6.2.0",
     "vue-property-decorator": "^6.0.0",
     "vue-rx": "^5.0.0",
-    "vuetify": "^1.0.0",
+    "vuetify": "^1.0.3",
     "vuex": "^3.0.1",
     "vuex-class": "^0.3.0"
   },
@@ -26,14 +26,14 @@
   "devDependencies": {
     "@reactivex/rxjs": "^5.5.6",
     "@types/axios": "^0.14.0",
-    "@types/jest": "^22.1.2",
+    "@types/jest": "^22.1.3",
     "@types/node": "^9.4.6",
     "@types/vue": "^2.0.0",
-    "babel-jest": "^22.2.2",
+    "babel-jest": "^22.4.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-vue-app": "^2.0.0",
-    "jest": "^22.3.0",
+    "jest": "^22.4.0",
     "jest-serializer-vue": "^0.3.0",
     "jest-vue-preprocessor": "^1.3.1",
     "stylus": "^0.54.5",
@@ -42,47 +42,10 @@
     "ts-loader": "^3.5.0",
     "tslint": "^5.9.1",
     "tslint-config-standard": "^7.0.0",
-    "typescript": "^2.7.1",
+    "typescript": "^2.7.2",
     "vue-language-server": "^0.0.30",
-    "vue-test-utils": "^1.0.0-beta.11"
-  },
-  "jest": {
-    "verbose": true,
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts",
-      "vue"
-    ],
-    "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
-      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
-    },
-    "moduleNameMapper": {
-      "^~/(.*)$": "<rootDir>/$1",
-      "^vue$": "vue/dist/vue.common.js"
-    },
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/jest-serializer-vue"
-    ],
-    "setupFiles": [
-      "<rootDir>/test/unit/setup"
-    ],
-    "mapCoverage": true,
-    "coverageDirectory": "<rootDir>/test/unit/coverage",
-    "collectCoverageFrom": [
-      "components/**/*.{js,ts,vue}",
-      "layouts/**/*.{js,ts,vue}",
-      "pages/**/*.{js,ts,vue}",
-      "store/**/*.{js,ts}",
-      "!**/node_modules/**"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/test/e2e"
-    ],
-    "testMatch": [
-      "**/*.spec.(js|ts)"
-    ]
+    "vue-template-compiler": "^2.5.13",
+    "vue-test-utils": "^1.0.0-beta.11",
+    "wallaby-vue-compiler": "^1.0.2"
   }
 }

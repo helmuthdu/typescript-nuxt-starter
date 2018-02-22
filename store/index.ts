@@ -1,6 +1,9 @@
+import Vue from 'vue';
 import Vuex from 'vuex';
 import * as auth from './modules/auth';
 import * as root from './root';
+
+Vue.use(Vuex);
 
 // More info about store: https://vuex.vuejs.org/en/core-concepts.html
 // See https://nuxtjs.org/guide/vuex-store#classic-mode
@@ -11,21 +14,17 @@ import * as root from './root';
 // action: Sync or async operations that commit mutations
 // mutations: Modify the state
 interface ModulesStates {
-    auth: auth.State
+  auth: auth.State;
 }
 
-export type RootState = root.State & ModulesStates
+export type RootState = root.State & ModulesStates;
 
-const createStore = () => {
-    return new Vuex.Store({
-        state: root.state(),
-        getters: root.getters,
-        mutations: root.mutations,
-        actions: root.actions,
-        modules: {
-            [auth.name]: auth
-        }
-    });
-};
-
-export default createStore;
+export default new Vuex.Store({
+  state: root.state() as any,
+  getters: root.getters,
+  mutations: root.mutations,
+  actions: root.actions as any,
+  modules: {
+    [auth.name]: auth
+  }
+});

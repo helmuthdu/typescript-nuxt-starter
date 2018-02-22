@@ -1,3 +1,3 @@
-import { dev } from './dev.env';
+import { env } from './dev.env';
 
-export const config = dev;
+export const config = env;
