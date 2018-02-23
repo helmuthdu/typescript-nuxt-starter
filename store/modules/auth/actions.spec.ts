@@ -1,16 +1,14 @@
-import { RootState } from '@/store';
 import { State } from '@/store/modules/auth/state';
-import { Dispatch } from 'vuex';
 import { actions } from './actions';
 import { mutations } from './mutations';
 
 describe('store: authentication -> actions', () => {
   let state: State;
   let commit: any;
-  let dispatch: Dispatch;
-  let getters: any;
-  let rootGetters: any;
-  let rootState: RootState;
+  const dispatch: any = null;
+  const rootState: any = null;
+  const getters: any = null;
+  const rootGetters: any = null;
 
   beforeEach(() => {
     // mock state
