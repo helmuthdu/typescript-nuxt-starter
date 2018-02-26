@@ -5,7 +5,6 @@
   ],
   "rules": {
     "import-spacing": true,
-    "no-bitwise": false,
     "semicolon": [
       true,
       "always"
