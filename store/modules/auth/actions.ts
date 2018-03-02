@@ -1,7 +1,7 @@
-import { config } from '@/config';
-import { RootState } from '@/store';
-import { State } from '@/store/modules/auth/state';
-import { Types } from '@/store/modules/auth/types';
+import { config } from '~/config';
+import { RootState } from '~/store';
+import { State } from '~/store/modules/auth/state';
+import { Types } from '~/store/modules/auth/types';
 import axios from 'axios';
 import qs from 'qs';
 import { ActionContext, ActionTree } from 'vuex';

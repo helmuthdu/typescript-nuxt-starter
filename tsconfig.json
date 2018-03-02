@@ -8,7 +8,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
-    "strictPropertyInitialization": false,
     "skipLibCheck" : true,
     "sourceMap": true,
     "baseUrl": ".",
@@ -17,9 +16,15 @@
       "node_modules/@types"
     ],
     "paths": {
-      "@/*": [
+      "~/*": [
         "./*"
       ]
     }
-  }
+  },
+  "exclude": [
+    ".nuxt",
+    "dist",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }

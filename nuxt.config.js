@@ -30,7 +30,7 @@ module.exports = {
   build: {
     vendor: ['axios', 'vuex-class', 'nuxt-class-component']
   },
-  modules: ['~/modules/typescript.ts', '@nuxtjs/pwa'],
+  modules: ['~/modules/typescript', '@nuxtjs/pwa'],
   vendor: [
     '~/plugins/vuetify.ts'
   ],

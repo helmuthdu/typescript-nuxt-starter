@@ -36,7 +36,7 @@ module.exports = function (wallaby) {
     tests: [
       './components/**/*.spec.js',
       './store/**/*.spec.js',
-      './test/**/*.spec.js'
+      './tests/**/*.spec.js'
     ],
 
     env: {

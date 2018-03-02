@@ -1,9 +1,9 @@
-import { RootState } from '@/store/index';
-import { State } from '@/store/modules/auth/state';
+import { RootState } from '~/store';
+import { State } from '~/store/modules/auth/state';
 import { GetterTree } from 'vuex';
 
 export const getters: GetterTree<State, RootState> = {
-  isLogged: (state) => {
+  isLogged: (state: State) => {
     return state.isLogged;
   }
 };

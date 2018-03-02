@@ -26,10 +26,10 @@ module.exports = {
   mapCoverage: true,
 
   setupFiles: [
-    '<rootDir>/test/unit/setup'
+    '<rootDir>/tests/unit/setup'
   ],
 
-  coverageDirectory: '<rootDir>/test/unit/coverage',
+  coverageDirectory: '<rootDir>/tests/unit/coverage',
 
   collectCoverageFrom: [
     'components/**/*.{js,ts,vue}',
@@ -40,7 +40,7 @@ module.exports = {
   ],
 
   testPathIgnorePatterns: [
-    '<rootDir>/test/e2e'
+    '<rootDir>/tests/e2e'
   ],
 
   testMatch: [

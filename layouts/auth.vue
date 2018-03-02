@@ -17,7 +17,7 @@
 
     @Component
     export default class extends Vue {
-        @AuthState isLogged;
+        @AuthState isLogged: boolean;
     };
 </script>
 

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 export const fetch = axios.create({
     // baseURL: process.env.baseUrl,
@@ -7,19 +7,19 @@ export const fetch = axios.create({
     }
 });
 
-const requestSuccess = (req) => {
+const requestSuccess = (req: AxiosRequestConfig) => {
     return req;
 };
 
-const requestError = (err) => {
+const requestError = (err: AxiosError) => {
     return Promise.reject(err);
 };
 
-const responseSuccess = (res) => {
+const responseSuccess = (res: AxiosResponse) => {
     return Promise.resolve(res);
 };
 
-const responseError = (err) => {
+const responseError = (err: AxiosError) => {
     if (err.request.status === 401 || err.request.status === 403) {
         console.log('UNAUTHORIZED');
     }

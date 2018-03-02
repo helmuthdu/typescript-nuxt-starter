@@ -1,6 +1,6 @@
-import { State } from '@/store/modules/auth/state';
-import { actions } from './actions';
-import { mutations } from './mutations';
+import { State } from '~/store/modules/auth/state';
+import { actions } from '~/store/modules/auth/actions';
+import { mutations } from '~/store/modules/auth/mutations';
 
 describe('store: authentication -> actions', () => {
   let state: State;
