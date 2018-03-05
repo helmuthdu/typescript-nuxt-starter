@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "private": true,
   "dependencies": {
-    "@nuxtjs/pwa": "^2.0.5",
+    "@nuxtjs/pwa": "^2.0.6",
     "axios": "^0.18.0",
     "nuxt": "^1.4.0",
     "nuxt-class-component": "^1.2.0",
