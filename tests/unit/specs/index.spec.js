@@ -1,5 +1,5 @@
-import { shallow } from 'vue-test-utils';
 import HomePage from '~/pages/index.vue';
+import { shallow } from '@vue/test-utils';
 
 const $route = {
   path: '/some/path',

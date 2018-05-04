@@ -19,7 +19,7 @@ interface ModulesStates {
 
 export type RootState = root.State & ModulesStates;
 
-export default new Vuex.Store({
+export default () => new Vuex.Store({
   state: root.state() as any,
   getters: root.getters,
   mutations: root.mutations,

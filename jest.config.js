@@ -23,8 +23,6 @@ module.exports = {
     'jest-serializer-vue'
   ],
 
-  mapCoverage: true,
-
   setupFiles: [
     '<rootDir>/tests/unit/setup'
   ],

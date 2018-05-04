@@ -2,12 +2,10 @@ module.exports = function (wallaby) {
   const compiler = wallaby.compilers.babel({
     'presets': [
       ['vue-app', { 'useBuiltIns': true }],
-      'stage-2',
-      'flow'
+      'stage-2'
     ],
     'plugins': [
-      'transform-class-properties',
-      'syntax-flow'
+      'transform-class-properties'
     ]
   });
 
@@ -24,13 +22,13 @@ module.exports = function (wallaby) {
       { pattern: 'pages/**/*.vue' },
       { pattern: 'services/**/*.vue' },
       { pattern: 'store/**/*.vue' },
-      { pattern: 'components/**/*.js' },
-      { pattern: 'enuns/**/*.js' },
-      { pattern: 'layout/**/*.js' },
-      { pattern: 'pages/**/*.js' },
+      { pattern: 'components/**/*.ts' },
+      { pattern: 'enuns/**/*.ts' },
+      { pattern: 'layout/**/*.ts' },
+      { pattern: 'pages/**/*.ts' },
       { pattern: 'pages/**/*.json' },
-      { pattern: 'services/**/*.js' },
-      { pattern: 'store/**/*.js' }
+      { pattern: 'services/**/*.ts' },
+      { pattern: 'store/**/*.ts' }
     ],
 
     tests: [
@@ -61,9 +59,9 @@ module.exports = function (wallaby) {
     testFramework: 'jest',
 
     setup: function () {
-      const jestConfig = require('./package.json').jest;
+      const jestConfig = require('./package.json').jest || require('./jest.config');
       jestConfig.moduleNameMapper = {
-        '^~(.*)$': wallaby.projectCacheDir + '$1'
+        '^~/(.*)$': wallaby.projectCacheDir + '$1'
       };
       jestConfig.transform = {};
       wallaby.testFramework.configure(jestConfig);
