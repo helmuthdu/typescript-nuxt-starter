@@ -22,9 +22,9 @@ describe('store: authentication -> actions', () => {
     };
   });
 
-  test('AUTH_LOGIN', () => {
+  test('AUTH_LOGIN', async () => {
     // apply mutation
-    actions.doLogin({ state, commit, dispatch, getters, rootState, rootGetters }, {
+    await actions.doLogin({ state, commit, dispatch, getters, rootState, rootGetters }, {
       username: 'helmuthdu',
       email: 'helmuthdu@gmail.com'
     });

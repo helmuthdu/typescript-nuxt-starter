@@ -9,9 +9,9 @@ module.exports = {
   ],
 
   transform: {
-    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
-    '^.+\\.ts$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
-    '.*\\.(vue)$': '<rootDir>/node_modules/jest-vue-preprocessor'
+    '^.+\\.vue$': 'vue-jest',
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
+    '^.+\\.(ts|js)x?$': 'ts-jest',
   },
 
   moduleNameMapper: {
@@ -24,7 +24,7 @@ module.exports = {
   ],
 
   setupFiles: [
-    '<rootDir>/tests/unit/setup'
+    '<rootDir>/tests/unit/setup.ts'
   ],
 
   coverageDirectory: '<rootDir>/tests/unit/coverage',

@@ -11,7 +11,7 @@ const $route = {
 
 describe('Test suite for HomePage', () => {
   test('Test initial layout', () => {
-    const wrapper = shallow(HomePage, {
+    const wrapper = shallow(HomePage as any, {
       mocks: {
         $route
       }
